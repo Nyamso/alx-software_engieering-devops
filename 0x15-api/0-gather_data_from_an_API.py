@@ -19,7 +19,7 @@ if __name__ == "__main__":
             titles.append(task.get("title"))
         num_total += 1
 
-    string = 'Employee {} is done with tasks({:d}/{:d}):'
+    string = 'Employee {} is done with tasks({ }/{ }):'
     print(string.format(dict_user.get("name"), num_done, num_total))
     for title in titles:
         print("\t {}".format(title))

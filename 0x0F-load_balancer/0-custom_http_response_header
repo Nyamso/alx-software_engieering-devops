@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Installs Nginx with the following configurations:
 #+    Listens on port 80.
-#+    Returns a page containing "Hello WOrld!" when queried
+#+    Returns a page containing "Hello World!" when queried
 
 apt-get update
 apt-get install -y nginx
@@ -15,7 +15,7 @@ echo "Ceci n'est pas une page" > /var/www/html/404.html
 printf %s "server {
     listen 80 default_server;
     listen [::]:80 default_server;
-    add_header X-Served-By $HOSTNAME;
+    add_header X-Served-By 54.237.94.18;
     root   /var/www/html;
     index  index.html index.htm;
     location /redirect_me {

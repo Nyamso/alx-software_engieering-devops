@@ -15,7 +15,7 @@ echo "Ceci n'est pas une page" > /var/www/html/404.html
 printf %s "server {
     listen 80 default_server;
     listen [::]:80 default_server;
-    add_header X-Served-By 54.237.94.18;
+    add_header X-Served-By $HOSTNAME;
     root   /var/www/html;
     index  index.html index.htm;
     location /redirect_me {

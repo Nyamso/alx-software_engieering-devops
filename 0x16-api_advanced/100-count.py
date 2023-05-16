@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Function that queries the Reddit API"""
+"""
+Function that queries the Reddit API"""
 import re
 import requests
 import sys
@@ -21,15 +22,16 @@ def add_title(dictionary, hot_posts):
 
 
 def recurse(subreddit, dictionary, after=None):
-   """ Queries to Reddit API """
+    """ Queries to Reddit API """
     u_agent = 'Mozilla/5.0'
-   headers = {
-       'User-Agent': u_agent
+    headers = {
+        'User-Agent': u_agent
     }
 
-   params = {
-       'after': after
+    params = {
+        'after': after
     }
+
     url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
     res = requests.get(url,
                        headers=headers,
@@ -49,7 +51,6 @@ def recurse(subreddit, dictionary, after=None):
 
 
 def count_words(subreddit, word_list):
-    """ Init function """
     dictionary = {}
 
     for word in word_list:
